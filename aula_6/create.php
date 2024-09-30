@@ -19,20 +19,20 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create</title>
+    <title>Criar notas</title>
 </head>
 <body>
-    <form method="POST">
-        <label for="id_conteudo">Nome:</label>
-        <input type="text" id="id_conteudo" name="id_conteudo" required>
-        <label for="nome_conteudo">E-mail:</label>
-        <input type="nome_conteudo" id="nome_conteudo" name="nome_conteudo" required>
-        <button type="submit">Enviar</button>
-    </form>
-    <a href="read.php">Ver registros.</a>
+   <form method="post" action="create.php">
+    <h1>Criar Notas:</h1>
+    Nome do Conteudo: <input type="text" name="nome_conteudo" required><br><br>
+    Conteudo Nota: <input type="text" name="conteudo-nota" required><br><br>
+    <br>
+    <input type="submit" value="Adicionar nota" class="adicionar">
+    <button type="button" onclick="window.location.href='read.php';" class="registros">Ver registros</button>  
+</form>
 </body>
 </html>
