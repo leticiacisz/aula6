@@ -33,5 +33,6 @@ $conn->close();
         <input type="nome_conteudo" id="nome_conteudo" name="nome_conteudo" required>
         <button type="submit">Enviar</button>
     </form>
+    <a href="read.php">Ver registros.</a>
 </body>
 </html>
