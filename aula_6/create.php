@@ -2,10 +2,11 @@
 include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
+    $id_conteudo = $_POST['id_conteudo'];
+    $nome_conteudo = $_POST['nome_conteudo'];
+    $conteudo_nota = $_POST['conteudo_nota'];
 
-    $sql = "INSERT INTO user (name, email) VALUES ('$name', '$email')";
+    $sql = "INSERT INTO user (id_conteudo, nome_conteudo, conteudo_nota) VALUES ('$id_conteudo', '$nome_conteudo', '$conteudo_nota')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Novo registro criado com sucesso";
@@ -26,10 +27,10 @@ $conn->close();
 </head>
 <body>
     <form method="POST">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="id_conteudo">Nome:</label>
+        <input type="text" id="id_conteudo" name="id_conteudo" required>
+        <label for="nome_conteudo">E-mail:</label>
+        <input type="nome_conteudo" id="nome_conteudo" name="nome_conteudo" required>
         <button type="submit">Enviar</button>
     </form>
 </body>
